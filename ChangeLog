@@ -1,0 +1,9 @@
+
+= ISBN-Tools Change Log
+
+== ISBN-Tools 0.1.1: 2010-01-11
+* Fixed bug in hyphenate_isbn13
+
+== ISBN-Tools 0.1.0: 2006-09-28
+* Initial release
+
