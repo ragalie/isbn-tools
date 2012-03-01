@@ -1,4 +1,5 @@
 require "rubygems"
+gem 'test-unit' # need this for ruby 1.9.3
 require "test/unit"
 require "isbn/tools"
 
@@ -21,6 +22,9 @@ class TC_ISBN_Tools_Tests < Test::Unit::TestCase
 		isbn_3_10 = "2-930088-49-4" #unusually small (?) editor: good for hyphen testing!
 
 		isbn_4_10 = "4413008480" # japanese ISBN (I think, ... At least, it validates.)
+
+		isbn_5_10 = "049501303X" # valid isbn-10 ended with character X
+		isbn_5_13 = "9780495013037"
 
 		isbn = ""
 
@@ -98,6 +102,8 @@ class TC_ISBN_Tools_Tests < Test::Unit::TestCase
 		# test illegal conversion from 13 to 10 (should return nil because of the 979)
 		assert_equal(nil, ISBN_Tools.isbn13_to_isbn10(isbn_2_13))
 
+		assert_equal(true, ISBN_Tools.is_valid_isbn10?(isbn_5_10))
+		assert_equal(isbn_5_13, ISBN_Tools.isbn10_to_isbn13(isbn_5_10))
 	end
 end
 
