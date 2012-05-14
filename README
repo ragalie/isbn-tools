@@ -1,3 +1,13 @@
+== Not Maintained
+
+I originally pulled this project into GitHub from its 
+[original home](http://rubyforge.org/projects/isbn-tools/). I do not
+believe it is currently maintained.
+
+You may be interested in my [Lisbn](https://github.com/ragalie/lisbn)
+project which performs many of the same functions and is backed by
+a more modern test suite.
+
 == ISBN-Tools for Ruby
 
 This library provides the ability to manipulate ISBN numbers.
